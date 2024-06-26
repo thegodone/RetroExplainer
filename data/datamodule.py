@@ -49,7 +49,7 @@ class RetroAGTDataModule(pl.LightningDataModule):
         self.dataset_dict = {}
 
         if dataset_type == "uspto_50k":
-            max_node, max_lg_na, gate_num_size = 300, 100, 10
+            max_node, max_lg_na, max_gate_num_size = 300, 100, 10
             for data_split in split_names:
                 self.dataset_dict[data_split] = RetroAGTDataSet(root=root,
                                                                 data_split=data_split,
